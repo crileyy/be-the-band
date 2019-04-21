@@ -1,28 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { SearchBar } from './components/search/SearchBar';
+import { SpotifyFrame } from './components/spotify/SpotifyFrame';
+import { TabFrame } from './components/tabs/TabFrame';
+import { Header } from './components/header/Header';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+/*
+
+search bar for songs or artists
+iframe with spotify song | iframe with ultimate guitar (iframe with the artist)
+https://www.guitartabs.cc/tabs/v/vampire_weekend/step_tab.html ?
+https://www.guitartabsexplorer.com/vampire-weekend-Tabs/1/
+
+*/
+export const App = () => {
+  return (
+    <div className="App">
+      <Header />
+      <SearchBar />
+      <div className="iframes">
+        <SpotifyFrame />
+        <TabFrame />
       </div>
-    );
-  }
-}
-
-export default App;
+    </div>
+  );
+};
