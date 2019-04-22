@@ -1,7 +1,7 @@
 import React from 'react';
 import './TabFrame.css';
 
-export const TabFrame = () => {
+export const TabFrame = ({ search }) => {
   return (
     <div className="tab-frame">
       <span>Tab Iframe here</span>

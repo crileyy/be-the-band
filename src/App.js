@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { SearchBar } from './components/search/SearchBar';
 import { SpotifyFrame } from './components/spotify/SpotifyFrame';
@@ -14,13 +14,20 @@ https://www.guitartabsexplorer.com/vampire-weekend-Tabs/1/
 
 */
 export const App = () => {
+
+  const [search, setSearch] = useState('');
+
+  const updateSearch = (e) => {
+    setSearch(e.target.value);
+  };
+
   return (
     <div className="App">
       <Header />
-      <SearchBar />
+      <SearchBar searchValue={search} updateSearch={updateSearch} />
       <div className="iframes">
-        <SpotifyFrame />
-        <TabFrame />
+        <SpotifyFrame search={search} />
+        <TabFrame search={search} />
       </div>
     </div>
   );
