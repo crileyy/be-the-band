@@ -7,6 +7,7 @@ export const searchTrack = (search) => {
   {
     track(name: "${search}") {
       id
+      name
       artists {
         name
       }
