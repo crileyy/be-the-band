@@ -1,8 +1,7 @@
 import React from 'react';
 import './SpotifyFrame.css';
-import { searchTrack } from '../../util/SpotifyAPIHelper';
 
-export const SpotifyFrame = ({ search }) => {
+export const SpotifyFrame = ({ data }) => {
 
   /*
   use spotify api to search for track and get the uri (6rqhFgbbKwnb9MLmUQDhG6)
@@ -11,15 +10,13 @@ export const SpotifyFrame = ({ search }) => {
   Search: Be The Band `search bar`
   */
 
-  // TODO need to fix how url is created
   const spotifyFrame = () => {
-    console.log(search);
-    const id = searchTrack('help');
-    console.log(id);
-    const link = "https://open.spotify.com/embed/track/" + id;
-    console.log(link);
-    return "https://open.spotify.com/embed/track/" + id;
-  };
+    if (Object.keys(data).length === 0) {
+      return null;
+    } else {
+      return 'https://open.spotify.com/embed/track/' + data.data.track.id;
+    }
+  }
 
   return (
     <div className="spotify-frame">
