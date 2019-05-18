@@ -7,7 +7,7 @@ export const TabFrame = ({ data }) => {
     if (Object.keys(data).length === 0) {
       return null;
     } else {
-      return 'https://www.guitartabs.cc/tabs/v/' + data.data.track.artists[0].name.split(' ').join('_') + '/' + data.data.track.name.split(' ').join('_') + '_tab.html';
+      return 'https://www.guitartabsexplorer.com/' + data.data.track.artists[0].name.split(' ').join('-') + '-Tabs' + '/' + data.data.track.name.split(' ').join('-') + '-tab.html';
     }
   }
 

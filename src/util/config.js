@@ -1,8 +1,18 @@
-export default {
-  "clientId" : "9959dc3f236d4ac1b4642e25c28a2643",
-  "clientSecret" : "bb3f8461ab6b4417a0fb338f695bc736",
-  "redirectUri" : "",
-  "accessToken" : "BQBJ-MSTIRWFRCw82Y4Ibw1meKsL82qeTnqqPgrafcLa2j11Y2M6WXTTT8BWhw6OrUhG0tF0SH6Se6rQ6mJjJPV5iipDengnohA-0-ZzWEJOuEdWesalLAMvG_MG3mb1aCuUVZLJzHLbtYlJ9xC6facuGvMaN3SrxQ"
+const getHashParams = () => {
+  let hashParams = {};
+  let e, r = /([^&;=]+)=?([^&;]*)/g,
+    q = window.location.hash.substring(1);
+  while (e = r.exec(q)) {
+    hashParams[e[1]] = decodeURIComponent(e[2]);
+  }
+  return hashParams;
 }
 
-//todo: need to refresh access token
+export default {
+  "clientId": "9959dc3f236d4ac1b4642e25c28a2643",
+  "clientSecret": "bb3f8461ab6b4417a0fb338f695bc736",
+  "redirectUri": "",
+  "accessToken": getHashParams().access_token
+}
+
+// TODO; if no access token, prompt user to login
