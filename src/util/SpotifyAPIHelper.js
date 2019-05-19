@@ -17,18 +17,5 @@ export const searchTrack = (search) => {
       resolve(result);
     });
   });
-
-  //   SpotifyGraphQLClient(config).query(`
-  //   {
-  //     track(name: "${search}") {
-  //       id
-  //       artists {
-  //         name
-  //       }
-  //     }
-  //   }
-  // `).then(result => {
-  //   console.log('result ' + JSON.stringify(result.data.track));
-  //   return result;
-  // });
+  
 }

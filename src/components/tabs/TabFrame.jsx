@@ -30,8 +30,8 @@ export const TabFrame = ({ data }) => {
     <div className="tab-frame">
       <span>Tab Iframe here</span>
       <iframe className="guitar-tab-frame" title="guitar-tab-frame" src={tabFrame()} height="500" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      <a className="songster-link" style={{display: "table-cell"}} href={Object.keys(data).length === 0 ? '' : 'http://www.songsterr.com/a/wa/bestMatchForQueryString?s=' + data.data.track.name.split(' ').join('+') + '&a=' + data.data.track.artists[0].name.split(' ').join('+')} target="_blank">Songsterr Tab</a>
-      <a className="google-link" style={{display: "table-cell"}} href={Object.keys(data).length === 0 ? '' : 'https://www.google.com/search?q=' + data.data.track.name + ' ' + data.data.track.artists[0].name + ' tab'} target="_blank">Google search for Tab</a>
+      <a className="songster-link" style={{display: "table-cell"}} href={Object.keys(data).length === 0 || data.data.track ===  null ? '' : 'http://www.songsterr.com/a/wa/bestMatchForQueryString?s=' + data.data.track.name.split(' ').join('+') + '&a=' + data.data.track.artists[0].name.split(' ').join('+')} target="_blank">Songsterr Tab</a>
+      <a className="google-link" style={{display: "table-cell"}} href={Object.keys(data).length === 0 || data.data.track ===  null ? '' : 'https://www.google.com/search?q=' + data.data.track.name + ' ' + data.data.track.artists[0].name + ' tab'} target="_blank">Google search for Tab</a>
     </div>
   );
 };

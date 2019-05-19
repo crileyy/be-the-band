@@ -11,7 +11,7 @@ export const SpotifyFrame = ({ data }) => {
   */
 
   const spotifyFrame = () => {
-    if (Object.keys(data).length === 0) {
+    if (Object.keys(data).length === 0 || data === null || data.data.track ===  null) {
       return null;
     } else {
       return 'https://open.spotify.com/embed/track/' + data.data.track.id;
