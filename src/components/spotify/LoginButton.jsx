@@ -1,4 +1,3 @@
-// login button to redirect to login url
 import React from 'react';
 
 const stateKey = 'spotify_auth_state';
@@ -32,22 +31,3 @@ export const LoginButton = () => {
     <button onClick={handleClick}>Login to Spotify</button>
   );
 };
-
-/*
-when button is clicked:
-function() {
-            var client_id = 'CLIENT_ID'; // Your client id
-            var redirect_uri = 'REDIRECT_URI'; // Your redirect uri
-            var state = generateRandomString(16);
-            localStorage.setItem(stateKey, state);
-            var scope = 'user-read-private user-read-email';
-            var url = 'https://accounts.spotify.com/authorize';
-            url += '?response_type=token';
-            url += '&client_id=' + encodeURIComponent(client_id);
-            url += '&scope=' + encodeURIComponent(scope);
-            url += '&redirect_uri=' + encodeURIComponent(redirect_uri);
-            url += '&state=' + encodeURIComponent(state);
-            window.location = url;
-          }
-
-*/

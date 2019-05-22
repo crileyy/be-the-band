@@ -14,5 +14,3 @@ export default {
   "redirectUri": "",
   "accessToken": getHashParams().access_token
 }
-
-// TODO; if no access token, prompt user to login

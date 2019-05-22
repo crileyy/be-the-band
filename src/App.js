@@ -6,6 +6,7 @@ import { LoginButton } from './components/spotify/LoginButton';
 import { TabFrame } from './components/tabs/TabFrame';
 import { Header } from './components/header/Header';
 import { searchTrack } from './util/SpotifyAPIHelper';
+import { SearchButton } from './components/search/SearchButton';
 
 /*
 
@@ -35,7 +36,7 @@ export const App = () => {
       <Header />
       <LoginButton />
       <SearchBar searchValue={search} updateSearch={updateSearch} />
-      <button onClick={handleSearchSpotify}>Search</button>
+      <SearchButton handleSearchSpotify={handleSearchSpotify}/>
       <div className="iframes">
         <SpotifyFrame data={data} />
         <TabFrame data={data} />

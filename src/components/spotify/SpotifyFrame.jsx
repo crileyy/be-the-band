@@ -12,6 +12,9 @@ export const SpotifyFrame = ({ data }) => {
 
   const spotifyFrame = () => {
     if (Object.keys(data).length === 0 || data === null || data.data.track ===  null) {
+      if (data !== null && data !== undefined && data.errors !== undefined && data.errors.length > 0) {
+        alert("Please login to Spotify to use the website");
+      }
       return null;
     } else {
       return 'https://open.spotify.com/embed/track/' + data.data.track.id;
@@ -20,7 +23,7 @@ export const SpotifyFrame = ({ data }) => {
 
   return (
     <div className="spotify-frame">
-      <span>Spotify iframe here</span>
+      <span className="spotify-text">Spotify song <span role="img" aria-label="jsx-a11y/accessible-emoji">🎶</span></span>
       <iframe className="spotify" title="spotify" src={spotifyFrame()} height="500" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
   );
