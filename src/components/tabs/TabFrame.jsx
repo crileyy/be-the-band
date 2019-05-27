@@ -28,7 +28,7 @@ export const TabFrame = ({ data }) => {
   const renderLinks = () => {
     if (Object.keys(data).length !== 0 && data.data.track !== null && data !== {}) {
       return (
-        <div>
+        <div className="links">
           <a className="songster-link" style={{ display: "table-cell" }} href={'http://www.songsterr.com/a/wa/bestMatchForQueryString?s=' + data.data.track.name.split(' ').join('+') + '&a=' + data.data.track.artists[0].name.split(' ').join('+')} target="_blank">Songsterr Tab</a>
           <a className="google-link" style={{ display: "table-cell" }} href={'https://www.google.com/search?q=' + data.data.track.name + ' ' + data.data.track.artists[0].name + ' tab'} target="_blank">Google search for Tab</a>
         </div>

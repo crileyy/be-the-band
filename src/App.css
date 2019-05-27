@@ -1,10 +1,17 @@
+html,
+body {
+	height: 100%;
+}
+
 .App {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  min-height: 100%;
 }
 
 .iframes {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  flex: 1;
 }

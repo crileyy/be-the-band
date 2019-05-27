@@ -13,7 +13,7 @@ export const SpotifyFrame = ({ data }) => {
   const spotifyFrame = () => {
     if (Object.keys(data).length === 0 || data === null || data.data.track ===  null) {
       if (data !== null && data !== undefined && data.errors !== undefined && data.errors.length > 0) {
-        alert("Please login to Spotify to use the website");
+        alert("Please login to Spotify");
       }
       return null;
     } else {
@@ -24,7 +24,7 @@ export const SpotifyFrame = ({ data }) => {
   return (
     <div className="spotify-frame">
       <span className="spotify-text">Spotify song <span role="img" aria-label="jsx-a11y/accessible-emoji">🎶</span></span>
-      <iframe className="spotify" title="spotify" src={spotifyFrame()} height="500" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <iframe className="spotify" title="spotify" src={spotifyFrame()}  frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
   );
 };
