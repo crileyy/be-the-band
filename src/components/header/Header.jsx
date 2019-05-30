@@ -2,6 +2,9 @@ import React from 'react';
 import './Header.css';
 
 export const Header = () => {
+
+  // TODO: need background image for header
+
   return (
     <div className="header">
       <h1>Be The Band</h1>

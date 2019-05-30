@@ -1,7 +1,8 @@
 import React from 'react';
+import './SearchButton.css';
 
 export const SearchButton = ({ handleSearchSpotify }) => {
   return (
-    <button onClick={handleSearchSpotify}>Search</button>
+    <button className="search-button" onClick={handleSearchSpotify}>Search</button>
   );
 };

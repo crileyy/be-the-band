@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
 .searchBox {
     display: flex;
     justify-content: center;
-    height: 2em;
+    font-size: 2em;
     width: 50%;
     margin-left: 25%;
     margin-top: 2em;
     margin-bottom: 2em;
+    font-family: 'Nunito', sans-serif;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './LoginButton.css'
 
 const stateKey = 'spotify_auth_state';
 
@@ -28,6 +29,6 @@ export const LoginButton = () => {
   };
 
   return (
-    <button onClick={handleClick}>Login to Spotify</button>
+    <button className="zocial login-button" onClick={handleClick}>Login to Spotify</button>
   );
 };
