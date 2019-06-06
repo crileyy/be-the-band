@@ -1,11 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 .header {
     text-align: center;
-    font-family: 'Nunito', sans-serif;
-    font-weight: normal;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 h1, h2, h3 {
     font-weight: normal;
+}
+
+.title {
+    font-size: 4em;
+}
+
+.search-note {
+    font-size: 1.5em;
 }

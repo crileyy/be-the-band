@@ -20,6 +20,7 @@ export const App = () => {
 
   const [search, setSearch] = useState('');
   const [data, setData] = useState({});
+  const [displayFrames, setDisplayFrames] = useState(false);
 
   const updateSearch = (e) => {
     setSearch(e.target.value);
@@ -28,6 +29,7 @@ export const App = () => {
   const handleSearchSpotify = () => {
     searchTrack(search).then(result => {
       setData(result);
+      setDisplayFrames(true);
     })
   };
 
@@ -35,12 +37,14 @@ export const App = () => {
     <div className="App">
       <Header />
       <LoginButton />
-      <SearchBar searchValue={search} updateSearch={updateSearch} />
-      <SearchButton handleSearchSpotify={handleSearchSpotify}/>
-      <div className="iframes">
-        <SpotifyFrame data={data} />
-        <TabFrame data={data} />
-      </div>
+      <div className="app-searchbar"><SearchBar searchValue={search} updateSearch={updateSearch} /></div>
+      <SearchButton handleSearchSpotify={handleSearchSpotify} />
+      {displayFrames ?
+        <div className="iframes">
+          <SpotifyFrame data={data} />
+          <TabFrame data={data} />
+        </div> :
+        <h3 className="happy-rocking">Happy rocking <span role="img" aria-label="jsx-a11y/accessible-emoji">🎸🤘</span></h3>}
     </div>
   );
 };

@@ -6,3 +6,30 @@
     font-family: 'Nunito', sans-serif;
     font-size: 1.2em;
 }
+
+.search-button {
+    margin-left: 40%;
+    margin-right: 40%;
+    color: #fff;
+    background-color: #1db954;
+    font-size: 1.2em;
+    line-height: 1;
+    border-radius: 500px;
+    padding: 16px 48px 16px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border-width: 0;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    cursor: pointer;
+	text-align: center;
+	outline:none;
+	font-family: 'Nunito', sans-serif;
+	font-weight: bold;
+}
+
+.search-button:hover {
+	background-color: #0a7931;
+}

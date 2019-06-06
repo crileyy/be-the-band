@@ -12,10 +12,10 @@
     margin-right: 40%;
     color: #fff;
     background-color: #1db954;
-    font-size: 14px;
+    font-size: 1em;
     line-height: 1;
     border-radius: 500px;
-    padding: 16px 48px 18px;
+    padding: 16px 48px 16px;
     transition-property: background-color,border-color,color,box-shadow,filter;
     transition-duration: .3s;
     border-width: 0;
@@ -24,7 +24,14 @@
     text-transform: uppercase;
     white-space: normal;
     cursor: pointer;
-    text-align: center;
+	text-align: center;
+	outline:none;
+	font-family: 'Nunito', sans-serif;
+	font-weight: bold;
+}
+
+.login-button:hover {
+	background-color: #0a7931;
 }
 
 /* .zocial,
