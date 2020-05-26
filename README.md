@@ -1,3 +1,16 @@
+## Be The Band
+
+Be The Band is a web app that displays guitar tabs next to Spotify songs, making it
+easier for musicians to learn how to play the songs they enjoy. Made using React,
+JavaScript, and calling Spotify APIs with GraphQL.
+
+![](images/sample_screenshot.png)
+
+Unfortunately, tabs aren't abled to be displayed in an iframe at the moment, as the
+popular guitar tab websites do not allow their website to be in an iframe.
+
+Deploy new code to Heroku by running: `git push heroku master`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
