@@ -15,7 +15,7 @@ const generateRandomString = (length) => {
 export const LoginButton = () => {
   const handleClick = () => {
     const client_id = '9959dc3f236d4ac1b4642e25c28a2643'; // Your client id
-    const redirect_uri = 'http://localhost:3000/'; // Your redirect uri
+    const redirect_uri = 'https://be-the-band.herokuapp.com/'; // Your redirect uri
     const state = generateRandomString(16);
     localStorage.setItem(stateKey, state);
     const scope = '';
